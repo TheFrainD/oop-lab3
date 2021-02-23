@@ -8,7 +8,7 @@ public class StringMutator {
         String[] words = input.split(" ");
 
         for (int i = 0; i < words.length; i++) {
-            buffer.append(words[i].trim().replaceAll("\\p{Punct}", "").length() == length ? replace + words[i].replaceAll("[^\\p{Punct}]", "") + " " : words[i] + " ");
+            buffer.append(words[i].replaceAll("\\p{Punct}", "").length() == length ? replace + words[i].replaceAll("[^\\p{Punct}]", "") + " " : words[i] + " ");
         }
 
         return buffer.toString();
